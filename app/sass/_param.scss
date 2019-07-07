@@ -1,0 +1,140 @@
+@import
+  '_custom_bootstrap_vatiables.scss',
+  '../../bower_components/bootstrap/scss/_functions.scss',
+  '../../bower_components/bootstrap/scss/_variables.scss',
+  '../../bower_components/bootstrap/scss/_mixins.scss';
+
+body{
+  font: 18px/30px Georgia, Georgia, serif;
+}
+// The Mixin 
+@mixin placeholder_custom{
+  &:-ms-input-placeholder {
+    @content
+  }
+  &::-moz-placeholder {
+    @content
+  }
+  &::-webkit-input-placeholder {
+    @content
+  }
+}
+.arial_font{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+  overflow: hidden;
+}
+.wrapper_centered{
+  max-width: 730px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+.header{
+  
+  position: relative;
+  &:after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 99999px;
+    transform:translateX(-50%);
+    content: '';
+    z-index: -1;
+    border-bottom: 1px solid #dfdfdf;
+  }
+}
+p{
+  margin-bottom: 28px;
+}
+a{
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
+.btn{
+  text-decoration: none;
+}
+a.text-primary{
+  text-decoration: underline;
+  &:hover{
+    color: #3083c7 !important;
+    text-decoration: none;
+  }
+}
+.fz_14{
+  font-size: 14px;
+  line-height: 16px;
+}
+.text_light{
+  color: #898888;
+}
+h1{
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: bold;
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+.font_style_normal{
+  font-style: normal;
+}
+.blockquote_custom{
+  border-left: 3px solid #333;
+  q{
+    display: block;
+    font-size: 18px;
+    line-height: 30px;
+    &:after,&:before{
+      content: none;
+    }
+  }
+}
+.modal-title{
+  font-size: 30px;
+  line-height: 33px;
+  font-weight: bold;
+}
+.form-control{
+  border-color: #c6c6c6;
+}
+.modal_dialog{
+  max-width: 700px;
+  .modal-content{
+    border-radius: 0;
+  }
+  .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    padding: 10px;
+  }
+}
+.form_group{
+  margin-bottom: 20px;
+  .form-control{
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include placeholder_custom {
+      color: rgba(#333,.4);
+    } 
+    @include media-breakpoint-down(sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+  }
+   textarea{
+      min-height: 100px;
+    }
+}
+.btn_large{
+  height: 50px;
+}
