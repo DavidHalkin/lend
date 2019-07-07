@@ -38,6 +38,8 @@ h1 { font-size: 36px; line-height: 48px; font-weight: bold; }
 
 .blockquote_custom q:after, .blockquote_custom q:before { content: none; }
 
+.underline_text { text-decoration: underline; }
+
 .modal-title { font-size: 30px; line-height: 33px; font-weight: bold; }
 
 .form-control { border-color: #c6c6c6; }
@@ -70,7 +72,11 @@ h1 { font-size: 36px; line-height: 48px; font-weight: bold; }
 
 .long_bar:before { position: absolute; top: 0; left: 50%; height: 100%; width: 99999px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); background: #f3f3f3; content: ''; z-index: -1; }
 
-.soc_list a { font-size: 20px; color: #3083c7; text-decoration: none; }
+.soc_list { margin-right: 10px; margin-left: 10px; }
+
+.soc_list a { font-size: 20px; color: #898888; text-decoration: none; }
+
+.soc_list a:hover { color: #3083c7; }
 
 .block_article { border-bottom: 1px solid #ddd; }
 

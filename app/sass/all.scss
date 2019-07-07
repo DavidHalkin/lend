@@ -26,10 +26,15 @@
 	}
 }
 .soc_list{
+	margin-right: 10px;
+	margin-left: 10px;
 	a{
 		font-size: 20px;
-		color: #3083c7;
+		color: #898888;
 		text-decoration: none;
+		&:hover{
+			color: #3083c7;
+		}
 	}
 }
 .block_article{
