@@ -2,11 +2,15 @@ body { font: 18px/30px Georgia, Georgia, serif; }
 
 .arial_font { font-family: Arial, Helvetica, sans-serif; }
 
-.wrapper { overflow: hidden; }
+.wrapper { overflow: hidden; padding-top: 63px; }
+
+@media screen and (max-width: 630px) { .wrapper { padding-top: 110px; } }
 
 .wrapper_centered { max-width: 730px; padding: 0 15px; margin: 0 auto; width: 100%; }
 
-.header { position: relative; }
+.header { position: fixed; top: 0; left: 0; right: 0; background: #fff; z-index: 20; }
+
+@media screen and (max-width: 630px) { .header p { margin-left: 0 !important; margin-right: 0 !important; text-align: center !important; max-width: 100%; -webkit-box-flex: 0; -webkit-flex: 0 0 100%; -ms-flex: 0 0 100%; flex: 0 0 100%; } }
 
 .header:after { position: absolute; top: 0; left: 50%; height: 100%; width: 99999px; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); content: ''; z-index: -1; border-bottom: 1px solid #dfdfdf; }
 

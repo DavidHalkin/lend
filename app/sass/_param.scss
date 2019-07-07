@@ -24,6 +24,10 @@ body{
 }
 .wrapper{
   overflow: hidden;
+  padding-top: 63px;
+   @media screen and (max-width: 630px) {
+      padding-top: 110px;
+   }
 }
 .wrapper_centered{
   max-width: 730px;
@@ -32,8 +36,21 @@ body{
   width: 100%;
 }
 .header{
-  
-  position: relative;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ background: #fff;
+ z-index: 20;
+ @media screen and (max-width: 630px){
+    p{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      text-align: center !important;
+      max-width: 100%;
+      flex:0 0 100%;
+    }
+ }
   &:after{
     position: absolute;
     top: 0;
